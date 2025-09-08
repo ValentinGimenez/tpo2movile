@@ -34,8 +34,8 @@ public class DetailsActivity extends AppCompatActivity {
             setTitle(libro.getTitle());
             binding.tvTitle.setText(libro.getTitle());
             binding.tvAuthor.setText(libro.getAuthor());
-            binding.tvYear.setText(String.valueOf(libro.getYear()));
-            binding.tvPages.setText(String.valueOf(libro.getPages())); // sin texto fijo
+            binding.tvYear.setText("Año: " + String.valueOf(libro.getYear()));
+            binding.tvPages.setText("Páginas: " + String.valueOf(libro.getPages()));
             binding.tvDescription.setText(libro.getDescription());
         });
         viewModel.cargarDatos(getIntent());
