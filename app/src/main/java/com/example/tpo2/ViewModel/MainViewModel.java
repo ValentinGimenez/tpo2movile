@@ -116,15 +116,17 @@ public class MainViewModel extends AndroidViewModel {
             if (mutableLibro != null) mutableLibro.setValue(null);
             return;
         }
-        String q = titulo.trim().toLowerCase();
+
+        String tituloBuscado = titulo.trim().toLowerCase();
 
         for (Libro l : repositorio) {
-            if (l.getTitle() != null && l.getTitle().toLowerCase().contains(q)) {
+            if (l.getTitle() != null && l.getTitle().toLowerCase().equals(tituloBuscado)) {
                 if (mutableLibro != null) mutableLibro.setValue(l);
                 if (mutableMensaje != null) mutableMensaje.setValue(null);
                 return;
             }
         }
+
         if (mutableMensaje != null) mutableMensaje.setValue("No se encontró: " + titulo);
         if (mutableLibro != null) mutableLibro.setValue(null);
     }
