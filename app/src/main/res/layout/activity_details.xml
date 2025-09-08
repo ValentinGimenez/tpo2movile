@@ -7,6 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".DetailsActivity">
 
+    <ImageView
+        android:id="@+id/ivCover"
+        android:layout_width="140dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"/>
+
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="0dp"
